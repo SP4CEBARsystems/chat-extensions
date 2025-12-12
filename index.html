@@ -13,7 +13,7 @@
         <meta property="og:description" content="An example page that shows an inline SVG and provides images usable by social preview cards." />
         <!-- Preferred preview image (use PNG/JPEG for best compatibility) -->
 		<meta property="og:image" content="assets/favicon.svg" />
-        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:type" content="image/svg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="A preview of the SVG artwork" />
@@ -37,7 +37,7 @@
         <main class="wrap">
             <div class="card">
                 <h1>Shareable SVG example</h1>
-                <p class="hint">This page contains an inline SVG (visible here) and meta tags that point to preview images used when the page is shared on social platforms.</p>
+                <p class="hint">description</p>
 
                 <!-- Inline SVG — visible when someone opens the page in a browser -->
                 <figure aria-label="Example SVG artwork">
@@ -61,22 +61,7 @@
                         </g>
                     </svg>
                 </figure>
-
-                <p class="host-note">Host a PNG/JPEG preview at an absolute URL and put that URL in the <code>og:image</code> and <code>twitter:image</code> meta tags. Many social sites ignore SVGs for preview cards.</p>
-
-                <details>
-                    <summary>Checklist before publishing</summary>
-                    <ul>
-                        <li>Upload <code>image-preview.png</code> (1200×630 recommended) to a public URL and replace <code>https://example.com/image-preview.png</code> in the &lt;head&gt; meta tags.</li>
-                        <li>Keep your SVG hosted (or inline like this) for crisp on-page display — you can also host the SVG at an absolute URL and include that as an extra <code>og:image</code> tag.</li>
-                        <li>Test with Facebook Sharing Debugger and Twitter Card Validator to see how your page will look when shared (these tools scrape your page and show the preview).</li>
-                        <li>Make sure the URLs are served over HTTPS and accessible without authentication.</li>
-                    </ul>
-                </details>
-
             </div>
-
-            <p style="font-size:.9rem;color:#666;max-width:900px;text-align:center">If you want, I can: <strong>1)</strong> generate a properly sized PNG from your SVG, <strong>2)</strong> produce several sized preview images, or <strong>3)</strong> modify this page to use a remote SVG file instead of an inline one. Tell me which and I'll add it.</p>
         </main>
 		<script type="module" src="./js/index.js"></script>
     </body>
