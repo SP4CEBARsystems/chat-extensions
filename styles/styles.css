@@ -1,0 +1,7 @@
+/* Basic styling so the SVG is centered on the page */
+html,body{height:100%;margin:0;font-family:system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial}
+.wrap{min-height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;padding:2rem;gap:1rem}
+.card{border-radius:12px;padding:1.25rem;background:rgba(0,0,0,0.03);box-shadow:0 6px 18px rgba(0,0,0,0.06);max-width:980px;width:100%;}
+svg{max-width:100%;height:auto;display:block}
+.hint{font-size:.9rem;color:#444}
+.host-note{font-size:.85rem;color:#666}

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Shareable SVG — replace URLs before publishing</title>
+
+        <!-- Open Graph / Facebook -->
+        <!-- IMPORTANT: Use absolute, publicly accessible URLs. Replace the placeholders below. -->
+        <!-- Prefer a PNG/JPEG for best cross-platform preview support; keep the SVG hosted too for sharp display on the page. -->
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Shareable SVG Example" />
+        <meta property="og:description" content="An example page that shows an inline SVG and provides images usable by social preview cards." />
+        <!-- Preferred preview image (use PNG/JPEG for best compatibility) -->
+        <meta property="og:image" content="https://example.com/image-preview.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="A preview of the SVG artwork" />
+
+        <!-- Optional: provide the SVG as an additional image. Note many platforms do not render SVGs as preview images. -->
+        <meta property="og:image" content="https://example.com/image.svg" />
+        <meta property="og:image:type" content="image/svg+xml" />
+
+        <!-- Twitter card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Shareable SVG Example" />
+        <meta name="twitter:description" content="An example page that shows an inline SVG and provides images usable by social preview cards." />
+        <meta name="twitter:image" content="https://example.com/image-preview.png" />
+
+        <!-- If you want platforms/tools that still look for image_src: -->
+        <link rel="image_src" href="https://example.com/image-preview.png" />
+
+		<link rel="stylesheet" href="./styles/styles.css">
+    </head>
+    <body>
+        <main class="wrap">
+            <div class="card">
+                <h1>Shareable SVG example</h1>
+                <p class="hint">This page contains an inline SVG (visible here) and meta tags that point to preview images used when the page is shared on social platforms.</p>
+
+                <!-- Inline SVG — visible when someone opens the page in a browser -->
+                <figure aria-label="Example SVG artwork">
+                    <!-- Replace the SVG contents below with your actual artwork if you want -->
+                    <svg width="600" height="360" viewBox="0 0 600 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+                        <title id="title">Example Shareable SVG</title>
+                        <desc id="desc">A simple example SVG — replace or host externally and update meta tags before sharing.</desc>
+
+                        <defs>
+                            <linearGradient id="g" x1="0" x2="1">
+                                <stop offset="0%" stop-color="#6EE7B7" />
+                                <stop offset="100%" stop-color="#3B82F6" />
+                            </linearGradient>
+                        </defs>
+
+                        <rect width="100%" height="100%" rx="18" fill="url(#g)" />
+                        <g transform="translate(40,40)">
+                            <circle cx="120" cy="120" r="80" fill="#fff" opacity="0.12" />
+                            <text x="220" y="80" font-family="Verdana, Geneva, sans-serif" font-size="28" fill="#fff">Shareable SVG</text>
+                            <text x="220" y="120" font-family="Verdana, Geneva, sans-serif" font-size="14" fill="#fff" opacity="0.95">Inline on the page — use PNG for previews</text>
+                        </g>
+                    </svg>
+                </figure>
+
+                <p class="host-note">Host a PNG/JPEG preview at an absolute URL and put that URL in the <code>og:image</code> and <code>twitter:image</code> meta tags. Many social sites ignore SVGs for preview cards.</p>
+
+                <details>
+                    <summary>Checklist before publishing</summary>
+                    <ul>
+                        <li>Upload <code>image-preview.png</code> (1200×630 recommended) to a public URL and replace <code>https://example.com/image-preview.png</code> in the &lt;head&gt; meta tags.</li>
+                        <li>Keep your SVG hosted (or inline like this) for crisp on-page display — you can also host the SVG at an absolute URL and include that as an extra <code>og:image</code> tag.</li>
+                        <li>Test with Facebook Sharing Debugger and Twitter Card Validator to see how your page will look when shared (these tools scrape your page and show the preview).</li>
+                        <li>Make sure the URLs are served over HTTPS and accessible without authentication.</li>
+                    </ul>
+                </details>
+
+            </div>
+
+            <p style="font-size:.9rem;color:#666;max-width:900px;text-align:center">If you want, I can: <strong>1)</strong> generate a properly sized PNG from your SVG, <strong>2)</strong> produce several sized preview images, or <strong>3)</strong> modify this page to use a remote SVG file instead of an inline one. Tell me which and I'll add it.</p>
+        </main>
+		<script type="module" src="./js/index.js"></script>
+    </body>
+</html>
